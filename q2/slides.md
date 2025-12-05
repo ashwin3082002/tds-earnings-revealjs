@@ -79,11 +79,10 @@ footer: "21f3000426@ds.study.iitm.ac.in"
 
 ---
 
+![bg](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80)
+
 <!-- _class: lead -->
-<!-- backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80')" -->
-<!-- backgroundSize: cover -->
-<!-- backgroundPosition: center -->
-<!-- color: #ffffff -->
+<!-- _color: white -->
 
 # System Overview
 
