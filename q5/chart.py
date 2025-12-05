@@ -2,6 +2,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+from PIL import Image
 
 # Author: 21f3000426@ds.study.iitm.ac.in
 
@@ -60,9 +61,25 @@ plt.xticks(rotation=0)
 # Adjust layout to prevent label cutoff
 plt.tight_layout()
 
-# Save chart with exactly 512x512 pixels
-# Using dpi=64 with figsize=(8,8) gives exactly 512x512
-plt.savefig('chart.png', dpi=64)
+# Save chart as temporary file first
+plt.savefig('temp_chart.png', dpi=64)
+plt.close()
+
+# Ensure exact 512x512 dimensions using PIL
+img = Image.open('temp_chart.png')
+if img.size != (512, 512):
+    img = img.resize((512, 512), Image.Resampling.LANCZOS)
+img.save('chart.png', 'PNG', optimize=False)
+
+# Clean up temp file
+import os
+if os.path.exists('temp_chart.png'):
+    os.remove('temp_chart.png')
+
+# Verify dimensions
+final_img = Image.open('chart.png')
+print(f"Final image dimensions: {final_img.size}")
+assert final_img.size == (512, 512), "Image is not 512x512!"
 
 print("Chart generated successfully!")
 print(f"\nDataset Summary:")
