@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Q3 Earnings Report – Interactive Deck</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Reveal.js core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+
+    <!-- Code highlight theme -->
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.9.0/styles/atom-one-dark.css">
+
+    <style>
+      .subtitle {
+        font-size: 0.7em;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Slide 1: Title -->
+        <section>
+          <h2>Quarterly Earnings Report</h2>
+          <h3>Q3 FY 2025</h3>
+          <p class="subtitle">
+            Prepared by: Technical Consultant, Treasury & Risk Analytics<br>
+            Contact: <strong>21f3000426@ds.study.iitm.ac.in</strong>
+          </p>
+
+          <aside class="notes">
+            Welcome everyone. I’ll walk you through the key financial highlights,
+            margin trends, and risk exposure for this quarter. This deck is built
+            using RevealJS to showcase interactive presentation capabilities.
+          </aside>
+        </section>
+
+        <!-- Slide 2: Markdown slide -->
+        <section data-markdown>
+          <textarea data-template>
+## Key Financial Highlights – At a Glance
+
+- **Revenue growth**: +12.4% YoY
+- **Net interest income**: Stable with slight upward trend  
+- **Cost-to-income ratio**: Improved by *1.8 percentage points*
+- **Credit cost**: Within guidance range
+
+> Overall, the bank delivered resilient performance despite market volatility.
+
+Note: This slide is written in **Markdown** and rendered by RevealJS.
+          </textarea>
+
+          <aside class="notes">
+            This slide is pure Markdown. Mention that we can maintain slides
+            as Markdown files for version control and easier collaboration.
+          </aside>
+        </section>
+
+        <!-- Slide 3: Animated fragments -->
+        <section>
+          <h2>Drivers of Quarterly Performance</h2>
+          <ul>
+            <li class="fragment">Strong fee income from retail and SME segments</li>
+            <li class="fragment">Lower funding costs due to optimized deposit mix</li>
+            <li class="fragment">Tight control on operating expenses</li>
+            <li class="fragment">Prudent provisioning on stressed exposures</li>
+          </ul>
+
+          <aside class="notes">
+            Each bullet appears as a fragment. Use this to pace the discussion:
+            first revenue, then costs, then risk/provisions.
+          </aside>
+        </section>
+
+        <!-- Slide 4: Code sample with syntax highlighting -->
+        <section>
+          <h2>Sample Analytics Snippet</h2>
+          <p>Example: computing quarterly Net Interest Margin (NIM) using Python.</p>
+
+<pre><code class="language-python">
+def compute_nim(interest_income, interest_expense, earning_assets):
+    """
+    Net Interest Margin (NIM) = 
+    (Interest Income - Interest Expense) / Average Earning Assets
+    """
+    net_interest = interest_income - interest_expense
+    return net_interest / earning_assets
+
+# Example numbers in millions
+interest_income = 1250.0
+interest_expense = 780.0
+earning_assets = 18500.0
+
+nim = compute_nim(interest_income, interest_expense, earning_assets)
+print(f"Quarterly NIM: {nim:.2%}")
+</code></pre>
+
+          <aside class="notes">
+            This demonstrates that we can embed executable-looking code with
+            syntax highlighting. Explain that similar scripts back our dashboards.
+          </aside>
+        </section>
+
+        <!-- Slide 5: Math / financial formulas -->
+        <section>
+          <h2>Key Financial Formulas</h2>
+
+          <p class="fragment">
+            **Return on Equity (ROE)**:
+          </p>
+          <p class="fragment">
+            \( \displaystyle ROE = \frac{\text{Net Income}}{\text{Average Shareholders' Equity}} \)
+          </p>
+
+          <p class="fragment">
+            **Cost of Equity (CAPM)**:
+          </p>
+          <p class="fragment">
+            \( \displaystyle k_e = r_f + \beta \left( E[R_m] - r_f \right) \)
+          </p>
+
+          <p class="fragment">
+            **Loan Loss Coverage Ratio**:
+          </p>
+          <p class="fragment">
+            \( \displaystyle \text{Coverage} = \frac{\text{Loan Loss Provisions}}{\text{Gross NPA}} \)
+          </p>
+
+          <aside class="notes">
+            Mention that formulas are rendered using LaTeX via the math plugin.
+            These are widely used metrics the board is familiar with.
+          </aside>
+        </section>
+
+        <!-- Slide 6: Closing / Contact -->
+        <section>
+          <h2>Questions &amp; Next Steps</h2>
+          <ul>
+            <li class="fragment">Drill-down dashboards for business units</li>
+            <li class="fragment">Stress testing scenarios for next quarter</li>
+            <li class="fragment">Automation of recurring earnings summaries</li>
+          </ul>
+          <p class="fragment">
+            For follow-ups, reach out at:<br>
+            <strong>21f3000426@ds.study.iitm.ac.in</strong>
+          </p>
+
+          <aside class="notes">
+            Wrap up, ask for questions, and point them to your email for
+            detailed follow-up analysis.
+          </aside>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Reveal.js core -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+
+    <!-- Plugins -->
+    <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+        // Optional: show speaker notes in a separate window with 's'
+      });
+    </script>
+  </body>
+</html>
