@@ -61,7 +61,8 @@ plt.xticks(rotation=0)
 plt.tight_layout()
 
 # Save chart with exactly 512x512 pixels
-plt.savefig('chart.png', dpi=64, bbox_inches='tight')
+# Using dpi=64 with figsize=(8,8) gives exactly 512x512
+plt.savefig('chart.png', dpi=64)
 
 print("Chart generated successfully!")
 print(f"\nDataset Summary:")
