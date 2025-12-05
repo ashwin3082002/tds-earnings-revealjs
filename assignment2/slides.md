@@ -13,10 +13,9 @@ Contact: **21f3000426@ds.study.iitm.ac.in**
 
 ---
 
-<!--
-backgroundImage: url('https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO>/main/images/bg.jpg')
+
+backgroundImage: url('https://raw.githubusercontent.com/ashwin3082002/tds-earnings-revealjs/main/images/bd.png')
 backgroundSize: cover
--->
 
 ## Overview
 
